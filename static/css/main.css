@@ -68,6 +68,10 @@ a:hover {
     padding: 10px 0;
 }
 
+.item.list {
+    text-align: left;
+}
+
 .item-tag {
     background-color: var(--accent);
 }

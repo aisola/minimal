@@ -6,14 +6,9 @@
 
     {{ range (.Paginator 5).Pages }}
 
-    <div class="item list">
+    <div class="item">
 
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-
-        <h5>{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</h5>
-
-        <p>{{ .Summary }}</p>
-
+        <h2><a href="{{ .Params.website }}" target="_blank">{{ .Title }}</a></h2>
         {{ range .Params.tags }} <kbd class="item-tag">{{ . }}</kbd> {{ end }}
 
     </div>

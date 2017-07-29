@@ -2,7 +2,15 @@
 
 <main>
 
-    {{ partial "list-item" . }}
+    <div class="item">
+
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+
+        <h5>{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</h5>
+
+        {{ range .Params.tags }} <kbd class="item-tag">{{ . }}</kbd> {{ end }}
+
+    </div>
 
     <br> <div class="text-justify">{{ .Content }}</div>
 
@@ -13,7 +21,15 @@
 
         <h4 class="page-header">Related</h4>
 
-        {{ range $related }} {{ partial "list-item" . }} {{ end }}
+        {{ range $related }}
+
+            <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+
+            <h5>{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</h5>
+
+            {{ range .Params.tags }} <kbd class="item-tag">{{ . }}</kbd> {{ end }}
+
+        {{ end }}
 
     {{ end }}
 
