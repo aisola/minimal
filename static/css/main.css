@@ -78,6 +78,10 @@ a:hover {
     background-color: var(--accent);
 }
 
+.text-justify img {
+    max-width: 100%;
+}
+
 /*navigation bar icons*/
 
 .navbar-icon {
