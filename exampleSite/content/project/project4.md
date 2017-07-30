@@ -1,8 +1,8 @@
 ---
-title: "Project 4"
-description: "Pellentesque eu lacinia id"
-repo: "#"
-tags: ["highlight-js", "syntax-highlighting"]
-weight: 4
+title: "Project 1"
+description: "Lorem ipsum dolor sit amet"
+website: "http://example.com/"
+tags: ["go", "golang", "hugo"]
+weight: 1
 draft: false
 ---

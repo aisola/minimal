@@ -1,16 +1,17 @@
-baseURL = "http://example.com/"
+baseURL = "http://example.com"
 languageCode = "en-us"
-title = "Minimal"
+title = "Sammy Doe"
 theme = "minimal"
 
 [params]
-    author = "Calin Tataru"
-    description = "Personal blog theme powered by Hugo"
+    owner = "My Company LLC"
+    author = "Sammy Doe"
+    description = "A blog about stuff."
     githubUsername = "#"
     accent = "red"
     showBorder = true
     backgroundColor = "white"
-    font = "Quicksand" # should match the name on Google Fonts!
+    font = "Open Sans" # should match the name on Google Fonts!
     highlight = true
     highlightStyle = "solarized-dark"
     highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
@@ -19,12 +20,10 @@ theme = "minimal"
     url = "/"
     name = "Home"
     weight = 1
-
 [[menu.main]]
     url = "/post/"
     name = "Posts"
     weight = 2
-
 [[menu.main]]
     url = "/project/"
     name = "Projects"
@@ -35,22 +34,22 @@ theme = "minimal"
 # The list of available icons can be found at http://fontawesome.io/icons/
 
 [[menu.icon]]
-    url = "mailto:me@example.com"
+    url = "mailto:sammy.doe@example.com"
     name = "envelope-o"
     weight = 1
 
 [[menu.icon]]
-    url = "https://github.com/username/"
+    url = "https://github.com/Example/"
     name = "github"
     weight = 2
 
 [[menu.icon]]
-    url = "https://twitter.com/username/"
+    url = "https://twitter.com/Example/"
     name = "twitter"
     weight = 3
 
 [[menu.icon]]
-    url = "https://www.linkedin.com/in/username/"
+    url = "https://www.linkedin.com/in/SammyDoe/"
     name = "linkedin"
     weight = 4
 

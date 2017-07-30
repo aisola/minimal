@@ -1,6 +1,6 @@
 # Minimal
 
-Personal blog theme powered by [Hugo](https://gohugo.io)
+Minimal blog-based theme for [Hugo](https://gohugo.io)
 
 ## Installation
 
@@ -8,7 +8,7 @@ You can install the theme either as a clone or submodule.
 
 I recommend the latter. From the root of your Hugo site, type the following:
 
-    $ git submodule add https://github.com/calintat/minimal.git themes/minimal
+    $ git submodule add https://github.com/aisola/minimal.git themes/minimal
     $ git submodule init
     $ git submodule update
 
@@ -26,19 +26,19 @@ To get started, copy the `config.toml` file inside `exampleSite` to the root of 
 
 Now edit this file and add your own information. Note that some fields can be ommited.
 
-I recommed you use the theme's archetypes so now delete your site's `archetypes/default.md`.
+I recommend you use the theme's archetypes so now delete your site's `archetypes/default.md`.
 
 ## Features
 
 You can tweak the look of the theme to suit your needs in a number of ways:
 
-- The accent colour can be changed by using the `accent` field in `config.toml`.
+- The accent color can be changed by using the `accent` field in `config.toml`.
 
-- You can also change the background colour by using `backgroundColor`.
+- You can also change the background color by using `backgroundColor`.
 
 - Add colored 5px borders at the top and bottom of pages by setting `showBorder` to `true`.
 
-For best results, I recommend you use a dark accent colour with a light background, for example:
+For best results, I recommend you use a dark accent color with a light background, for example:
 
 ```toml
 [params]
@@ -53,7 +53,7 @@ The theme uses [Google Fonts](https://fonts.google.com) to load its font. To cha
 
 ```toml
 [params]
-    font = "Quicksand" # should match the name on Google Fonts!
+    font = "Open Sans" # should match the name on Google Fonts!
 ```
 
 ### Syntax highlighting
@@ -76,3 +76,10 @@ Please note the style and languages should be written in hyphen-separated lowerc
     highlightStyle = "solarized-dark"
     highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
 ```
+
+### Attribution
+
+This repo is forked from [this one](https://github.com/aisola/minimal) by
+[Calin Tataru](https://github.com/calintat). Both this repository and the
+original are licensed under the permissive
+[MIT License](https://opensource.org/licenses/MIT).

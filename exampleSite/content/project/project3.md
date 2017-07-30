@@ -1,8 +1,8 @@
 ---
-title: "Project 3"
-description: "Cras felis sapien"
-repo: "#"
-tags: ["bootstrap", "responsive"]
-weight: 3
+title: "Project 1"
+description: "Lorem ipsum dolor sit amet"
+website: "http://example.com/"
+tags: ["go", "golang", "hugo"]
+weight: 1
 draft: false
 ---

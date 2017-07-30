@@ -1,12 +1,12 @@
 name = "Minimal"
 license = "MIT"
-licenselink = "https://github.com/calintat/minimal/blob/master/LICENSE.md"
-description = "Personal blog theme powered by Hugo"
-homepage = "http://github.com/calintat/minimal/"
+licenselink = "https://github.com/aisola/minimal/blob/master/LICENSE"
+description = "Minimal blog-based theme for Hugo"
+homepage = "http://github.com/aisola/minimal/"
 tags = ["blog", "minimal", "personal", "responsive"]
 features = ["responsive"]
 min_version = "0.24.1"
 
 [author]
-  name = "Calin Tataru"
-  homepage = "https://calintat.github.io/"
+  name = "Abram Isola"
+  homepage = "http://abram.isola.mn"
