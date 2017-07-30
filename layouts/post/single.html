@@ -1,0 +1,57 @@
+{{ partial "header" . }}
+
+<main>
+
+    <div class="item">
+
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+
+        <h5>{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</h5>
+
+        {{ range .Params.tags }} <kbd class="item-tag">{{ . }}</kbd> {{ end }}
+
+    </div>
+
+    <br> <div class="text-justify">{{ .Content }}</div>
+
+    <!-- related posts with the same tags -->
+    {{ $related := first 3 (where (where (where .Site.Pages.ByDate.Reverse ".Type" "==" "post") ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
+
+    {{ if $related }}
+
+        <h4 class="page-header">Related</h4>
+
+        {{ range $related }}
+
+            <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+
+            <h5>{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</h5>
+
+            {{ range .Params.tags }} <kbd class="item-tag">{{ . }}</kbd> {{ end }}
+
+        {{ end }}
+
+    {{ end }}
+
+    {{ if .Site.Params.disqusShortname }}
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = '{{ .Permalink }}';  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = '{{ .UniqueID }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://' + '{{ .Site.Params.disqusShortname }}' + '.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    {{ end }}
+
+</main>
+
+{{ partial "footer.html" . }}
