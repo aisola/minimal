@@ -8,6 +8,11 @@
 
         <h2>{{ .Site.Params.Description }}</h2>
 
+        {{- range first 1 (where .Data.Pages.ByPublishDate "Section" "post") }}
+            <h4 class="latest-post">Read my latest post:</h4>
+            <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+        {{- end }}
+
     </div>
 
 </main>

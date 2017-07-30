@@ -57,3 +57,10 @@ theme = "minimal"
     url = "https://www.stackoverflow.com/username/"
     name = "stack-overflow"
     weight = 5
+
+# Footer menu
+
+[[menu.footer]]
+    url = "/about"
+    name = "About"
+    weight = 1

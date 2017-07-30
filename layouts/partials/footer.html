@@ -1,15 +1,14 @@
         <footer>
 
-            <p class="copyright text-muted">Copyright &copy;, {{ .Site.Params.owner }}. All rights reserved.</p>
-            <p class="text-muted">Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/aisola/minimal">Minimal</a>.</p>
-            <p class="text-muted">
-                Unless otherwise specified, all code samples on this site are
-                licensed under the permissive
-                <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.
-            </p>
-            <p class="text-muted">
-                Unless otherwise specified, all other text and content is
-                provided under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>
+            <p class="copyright text-muted">
+                Copyright &copy; 2017, {{ .Site.Params.owner }}. All rights
+                reserved.
+                {{ if .Site.Menus.footer }}
+                        {{ range sort .Site.Menus.footer }}
+                            | <a href="{{ .URL }}">{{ .Name }}</a>
+                        {{ end }}
+                    </ul>
+                {{ end }}
             </p>
 
         </footer>
